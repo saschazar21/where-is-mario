@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Super Mario 256';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/SuperMario256.ttf') format('truetype');
+}
+
+:root {
+  --font-family-base: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+  --font-family-special: 'Super Mario 256', var(--font-family-base);
+}

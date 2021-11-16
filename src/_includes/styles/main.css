@@ -2,7 +2,13 @@ html {
   font-size: 100%;
 } /*16px*/
 
+html * {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-height: 100vh;
   background: RGB(var(--color-bg));
@@ -10,6 +16,13 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: RGB(var(--color-main));
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 p {
@@ -29,9 +42,15 @@ h5 {
 }
 
 h1 {
+  --shadow-padding: 3px;
+
   margin-top: 0;
   font-size: 3.052rem;
   text-align: center;
+  text-shadow: var(--shadow-padding) 0 RGB(var(--color-main)),
+    calc(var(--shadow-padding) * -1) 0 RGB(var(--color-main)),
+    0 var(--shadow-padding) RGB(var(--color-main)),
+    0 calc(var(--shadow-padding) * -1) RGB(var(--color-main));
 }
 
 h2 {
@@ -50,7 +69,50 @@ h5 {
   font-size: 1.25rem;
 }
 
+a {
+  color: RGB(var(--color-blue));
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:focus,
+a:focus-visible {
+  outline: 2px dotted RGB(var(--color-blue));
+  outline-offset: 3px;
+}
+
+a:visited {
+  color: RGB(var(--color-blue));
+}
+
 small,
 .text_small {
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.209rem;
+  }
+
+  h2 {
+    font-size: 3.157rem;
+  }
+
+  h3 {
+    font-size: 2.369rem;
+  }
+
+  h4 {
+    font-size: 1.777rem;
+  }
+
+  h5 {
+    font-size: 1.333rem;
+  }
+
+  small,
+  .text_small {
+    font-size: 0.75rem;
+  }
 }

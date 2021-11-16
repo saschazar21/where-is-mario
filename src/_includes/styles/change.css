@@ -1,0 +1,9 @@
+.change {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.change > h2 {
+  font-size: 1.75rem;
+}

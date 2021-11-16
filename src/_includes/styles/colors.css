@@ -1,7 +1,20 @@
 :root {
   --color-bg: 244, 243, 244;
-  --color-main: 130, 76, 65;
-  --color-blue: 8, 70, 158;
+  --color-main: 18, 17, 19;
   --color-red: 194, 53, 45;
-  --color-special: 216, 158, 109;
+  --color-green: 13, 147, 0;
+  --color-green-light: 136, 216, 0;
+  --color-blue: 8, 70, 158;
+  --color-primary: 152, 72, 0;
+  --color-secondary: 190, 189, 255; /* 248, 192, 152; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: 18, 17, 19;
+    --color-main: 244, 243, 244;
+    --color-blue: 5, 162, 217;
+    --color-primary: 0, 124, 141;
+    --color-secondary: 181, 235, 242;
+  }
 }

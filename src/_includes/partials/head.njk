@@ -1,3 +1,19 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ manifest.name }}</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="{{ page.url }}" />
+<meta name="author" content="{{ pkg.author.name }}" />
+<meta name="description" content="{{ tldr or manifest.description }}" />
+<meta name="generator" content="Eleventy {{ pkg.devDependencies['@11ty/eleventy'] | replace('^', '') }}" />
+<meta name="theme-color" content="{{ manifest.theme_color }}" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+
 <style>{% include 'styles/colors.css' %}</style>
 <style>{% include 'styles/typography.css' %}</style>
 <style>{% include 'styles/main.css' %}</style>
+
+<link rel="preload" href="/SuperMario256.ttf" as="font" />

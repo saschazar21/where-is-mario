@@ -1,0 +1,14 @@
+[
+  {
+    "location": {
+      "name": "Andromeda Tower",
+      "city": "Vienna",
+      "country": "Austria",
+      "coordinates": {
+        "latitude": "40.735",
+        "longitude": "-73.99"
+      }
+    },
+    "date": "2021-11-12"
+  }
+]

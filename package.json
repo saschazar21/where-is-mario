@@ -1,7 +1,10 @@
 {
   "name": "where-is-mario",
+  "appName": "Where is Mario?",
+  "displayName": "Mario",
   "version": "1.0.0",
-  "description": "A website documenting the current location of Xabi's Mario",
+  "color": "#c2352d",
+  "description": "A website documenting the current location of the plastic Mario figure.",
   "main": "index.js",
   "repository": "https://github.com/saschazar21/where-is-mario",
   "author": {

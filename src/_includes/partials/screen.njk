@@ -1,0 +1,9 @@
+{% set current = history | first %}
+
+<style data-helmet>{% include 'styles/screen.css' %}</style>
+
+<article class="screen">
+  <span class="screen-msg">Mario was last seen at:</span>
+  <h2 class="screen-headline"><small>{{ current.location.name }},</small><span>{{ current.location.city }}</span></h2>
+  <img height="96" width="96" class="screen-img" src="/svg/pipe.svg" alt="A pixel graphic showing the top end of a pipe as seen in the Super Mario Bros. NES game.">
+</article>

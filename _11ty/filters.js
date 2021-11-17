@@ -14,5 +14,6 @@ module.exports = {
     return url.toString();
   },
   date: (date, format = 'dddd, MMMM D, YYYY') => day(date).format(format),
+  hostname: url => new URL(url).hostname,
   isodate: date => new Date(date).toISOString(),
 };

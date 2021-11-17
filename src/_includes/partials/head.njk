@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ manifest.name }}</title>
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="{{ page.url }}" />
+<link rel="canonical" href="{{ page.url | absoluteURL }}" />
 <meta name="author" content="{{ pkg.author.name }}" />
 <meta name="description" content="{{ tldr or manifest.description }}" />
 <meta name="generator" content="Eleventy {{ pkg.devDependencies['@11ty/eleventy'] | replace('^', '') }}" />

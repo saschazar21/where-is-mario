@@ -3,6 +3,7 @@
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ manifest.name }}</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="{{ page.url | absoluteURL }}" />
+<link rel="apple-touch-icon" href="/icons/apple-touch-192.png" />
 <meta name="author" content="{{ pkg.author.name }}" />
 <meta name="description" content="{{ tldr or manifest.description }}" />
 <meta name="generator" content="Eleventy {{ pkg.devDependencies['@11ty/eleventy'] | replace('^', '') }}" />

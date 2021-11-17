@@ -2,7 +2,16 @@
 <footer>
   <h2>{{ manifest.name }}</h2>
   <p>{{ manifest.description }}</p>
-  <a href="{{ pkg.repository }}" rel="noindex nofollow noopener noreferrer" target="_blank">
-    GitHub
-  </a>
+  <ul>
+  <li>
+    <a href="{{ pkg.repository }}" rel="noindex nofollow noopener noreferrer" target="_blank">
+      GitHub
+    </a>
+  </li>
+  <li>
+    <a href="/feed.xml" target="_blank">
+      RSS Feed
+    </a>
+  </li>
+  </ul>
 </footer>

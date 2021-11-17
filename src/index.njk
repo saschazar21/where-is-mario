@@ -3,8 +3,24 @@ layout: default
 title: Where is Mario?
 ---
 
-<h1>{{ title }}</h1>
+<style data-helmet>{% include 'styles/index.css' %}</style>
 
+<header>
+  {% include 'partials/avatar.njk' %}
+  <h1>{{ title }}</h1>
+  <button id="scroll-to-content">View latest sighting</button>
+</header>
 
-{% include 'partials/screen.njk' %}
-{% include 'partials/change.njk' %}
+<div id="content">
+  {% include 'partials/screen.njk' %}
+</div>
+
+{% include 'partials/pull-request.njk' %}
+
+<script>
+  const scrollToContent = document.getElementById('scroll-to-content');
+  scrollToContent.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('content').scrollIntoView();
+  });
+</script>

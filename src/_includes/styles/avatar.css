@@ -1,0 +1,13 @@
+.avatar {
+  display: block;
+  height: 64px;
+  width: 64px;
+  margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+  .avatar {
+    height: 128px;
+    width: 128px;
+  }
+}

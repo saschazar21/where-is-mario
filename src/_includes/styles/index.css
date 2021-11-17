@@ -1,0 +1,21 @@
+#scroll-to-content {
+  animation: show-up ease-in var(--animation-duration, 0.5s);
+  position: relative;
+  bottom: -3rem;
+}
+
+#scroll-to-content::after {
+  content: '';
+  position: absolute;
+  border: 1rem solid transparent;
+  border-top-color: inherit;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+
+#content {
+  margin-top: 2rem;
+}

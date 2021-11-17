@@ -5,10 +5,5 @@
   </head>
   <body>
     {{ content |  safe }}
-    <script type="text/javascript">
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js');
-      }
-    </script>
   </body>
 </html>

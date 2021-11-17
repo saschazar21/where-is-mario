@@ -7,6 +7,7 @@
   "description": "A website documenting the current location of the plastic Mario figure.",
   "main": "index.js",
   "repository": "https://github.com/saschazar21/where-is-mario",
+  "homepage": "https://whereismario.pages.dev",
   "author": {
     "name": "Sascha Zarhuber",
     "email": "sascha.zarhuber@gmail.com",
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.5",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "dayjs": "^1.10.7",
     "eleventy-plugin-helmet": "^0.2.2",
     "eleventy-plugin-workbox": "^1.4.0",
     "npm-run-all": "^4.1.5",

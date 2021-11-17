@@ -1,0 +1,29 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  {% set newest = history | first %}
+  
+  <title>{{ manifest.name }}</title>
+  <subtitle>{{ manifest.description }}</subtitle>
+  <link href="{{ permalink | url | absoluteURL }}" rel="self"/>
+  <link href="{{ '' | absoluteURL }}"/>
+  <updated>{{ newest.date | isodate }}</updated>
+  <id>{{ pkg.homepage }}</id>
+  <author>
+    <name>{{ pkg.author.name }}</name>
+    <email>{{ pkg.author.email }}</email>
+  </author>
+  {% for entry in history | reverse %}
+  <entry>
+    <title>{{ entry.location.name }}, {{ entry.location.city }}</title>
+    <link href="{{ '' | absoluteURL }}"/>
+    <updated>{{ entry.date | isodate }}</updated>
+    <id>{{ loop.index0 }}</id>
+    <content>On {{ entry.date | date }}, Mario changed his location to {{ entry.location.name }}, {{ entry.location.city }} (Coordinates: {{ entry.location.coordinates.latitude }}, {{ entry.location.coordinates.longitude }}).</content>
+  </entry>
+  {% endfor %}
+</feed>

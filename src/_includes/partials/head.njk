@@ -8,10 +8,14 @@
 <meta name="generator" content="Eleventy {{ pkg.devDependencies['@11ty/eleventy'] | replace('^', '') }}" />
 <meta name="theme-color" content="{{ manifest.theme_color }}" />
 
+<!-- Hide from search engines -->
+<meta name="robots" content="noindex,nofollow" />
+
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
 
+<style>{% include 'styles/keyframes.css' %}</style>
 <style>{% include 'styles/colors.css' %}</style>
 <style>{% include 'styles/typography.css' %}</style>
 <style>{% include 'styles/main.css' %}</style>

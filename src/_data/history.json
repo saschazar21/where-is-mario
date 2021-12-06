@@ -22,5 +22,17 @@
       }
     },
     "date": "2019-07-16"
+  },
+  {
+    "location": {
+      "name": "Torre Mapfre",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "latitude": 41.3875,
+        "longitude": 2.197
+      }
+    },
+    "date": "2019-07-16"
   }
 ]

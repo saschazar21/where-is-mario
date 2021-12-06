@@ -17,9 +17,9 @@ title: Where is Mario?
       {% include 'partials/screen.njk' %}
     </div>
     {% if loop.length > 1 %}
-      <section>
+      <section class="travel-history">
         <h2>Mario's travel history</h2>
-        <ul class="travel-history">
+        <ul>
     {% endif %}
     {% else %}
       {% include 'partials/location-entry.njk' %}

@@ -8,19 +8,26 @@ title: Where is Mario?
 <header>
   {% include 'partials/avatar.njk' %}
   <h1>{{ title }}</h1>
-  <button id="scroll-to-content">View latest sighting</button>
+  <a id="scroll-to-location" class="button" href="#location">View latest sighting</a>
 </header>
 
-<div id="content">
-  {% include 'partials/screen.njk' %}
-</div>
+{% for location in history %}
+  {% if loop.first %}
+    <div id="location">
+      {% include 'partials/screen.njk' %}
+    </div>
+    {% if loop.length > 1 %}
+      <section>
+        <h2>Mario's travel history</h2>
+        <ul class="travel-history">
+    {% endif %}
+    {% else %}
+      {% include 'partials/location-entry.njk' %}
+  {% endif %}
+  {% if loop.last and loop.length > 1 %}
+      </ul>
+    </section>
+  {% endif %}
+{% endfor %}
 
 {% include 'partials/pull-request.njk' %}
-
-<script>
-  const scrollToContent = document.getElementById('scroll-to-content');
-  scrollToContent.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('content').scrollIntoView();
-  });
-</script>

@@ -1,10 +1,27 @@
-#scroll-to-content {
+h2 {
+  text-align: center;
+}
+
+.travel-history {
+  margin: 3rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.travel-history > li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+#scroll-to-location {
   animation: show-up ease-in var(--animation-duration, 0.5s);
   position: relative;
   bottom: -3rem;
 }
 
-#scroll-to-content::after {
+#scroll-to-location::after {
   content: '';
   position: absolute;
   border: 1rem solid transparent;
@@ -16,6 +33,6 @@
   height: 0;
 }
 
-#content {
+#location {
   margin-top: 2rem;
 }

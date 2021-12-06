@@ -5,10 +5,22 @@
       "city": "Vienna",
       "country": "Austria",
       "coordinates": {
-        "latitude": "48.233",
-        "longitude": "16.414"
+        "latitude": 48.233,
+        "longitude": 16.414
       }
     },
     "date": "2021-11-12"
+  },
+  {
+    "location": {
+      "name": "Torre Mapfre",
+      "city": "Barcelona",
+      "country": "Spain",
+      "coordinates": {
+        "latitude": 41.3875,
+        "longitude": 2.197
+      }
+    },
+    "date": "2019-07-16"
   }
 ]

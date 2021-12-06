@@ -1,6 +1,11 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion) {
   :root {
     --animation-duration: 0s;
+    scroll-behavior: unset;
   }
 }
 
@@ -106,7 +111,8 @@ small,
   font-size: 0.8rem;
 }
 
-button {
+button,
+.button {
   display: inline-flex;
   justify-content: center;
   border-radius: 4px;

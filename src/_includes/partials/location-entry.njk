@@ -1,0 +1,10 @@
+{% set startDate = location.date %}
+{% set endDate = history[loop.index0 - 1].date %}
+
+<style data-helmet="location-entry">{% include 'styles/location-entry.css' %}</style>
+
+<li>
+  <h3 class="location-headline"><small>{{ location.location.name }},</small><span>{{ location.location.city }}</span></h3>
+  <strong>{{ startDate | dateRelative(endDate) }}</strong>
+  <span>{{ startDate | date('MMM D, YYYY') }} – {{ endDate | date('MMM D, YYYY') }}</span>
+</li>

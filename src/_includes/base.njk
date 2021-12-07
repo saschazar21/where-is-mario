@@ -5,5 +5,27 @@
   </head>
   <body>
     {{ content |  safe }}
+
+    <script>
+      // https://web.dev/iframe-lazy-loading/
+      const elements = document.querySelectorAll('[loading="lazy"]');
+      
+      if (elements.length > 0) {
+        if ('loading' in HTMLIFrameElement.prototype) {
+          elements.forEach((element) => {
+            element.dataset?.src && (element.src = element.dataset.src);
+            element.dataset?.srcset && (element.srcset = element.dataset.srcset);
+            element.dataset?.sizes && (element.sizes = element.dataset.sizes);
+          });
+        } else {
+          // Dynamically import the LazySizes library
+          const script = document.createElement('script');
+          script.async = 'async';
+          script.src =
+            'https://unpkg.com/lazysizes/lazysizes.min.js';
+          document.body.appendChild(script);
+        } 
+      }
+    </script>
   </body>
 </html>

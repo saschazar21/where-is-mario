@@ -9,30 +9,13 @@
         "longitude": 16.414
       }
     },
+    "media": {
+      "images": [],
+      "video": {
+        "id": "BHI1r-hnhGA",
+        "platform": "youtube"
+      }
+    },
     "date": "2021-11-12"
-  },
-  {
-    "location": {
-      "name": "Torre Mapfre",
-      "city": "Barcelona",
-      "country": "Spain",
-      "coordinates": {
-        "latitude": 41.3875,
-        "longitude": 2.197
-      }
-    },
-    "date": "2019-07-16"
-  },
-  {
-    "location": {
-      "name": "Torre Mapfre",
-      "city": "Barcelona",
-      "country": "Spain",
-      "coordinates": {
-        "latitude": 41.3875,
-        "longitude": 2.197
-      }
-    },
-    "date": "2019-07-16"
   }
 ]

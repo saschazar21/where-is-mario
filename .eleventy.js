@@ -1,5 +1,6 @@
 const filters = require('./_11ty/filters');
 const plugins = require('./_11ty/plugins');
+const shortcodes = require('./_11ty/shortcodes');
 
 module.exports = config => {
   config.addPassthroughCopy({ 'src/_data/**/*.json': './' });
@@ -11,6 +12,10 @@ module.exports = config => {
 
   plugins.forEach(([plugin, pluginOptions]) =>
     config.addPlugin(plugin, pluginOptions)
+  );
+
+  shortcodes.forEach(([shortcode, fn]) =>
+    config.addNunjucksShortcode(shortcode, fn)
   );
 
   return {

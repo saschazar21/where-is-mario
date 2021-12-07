@@ -1,0 +1,19 @@
+{% if location.media %}
+
+{% for key, value in location.media %}
+
+{% if key == 'video' %}
+
+{% youtube value.id %}
+
+{% elif key == 'images' and value.length > 0 %}
+
+{% for image in value %}
+
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+
+{% endif %}

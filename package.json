@@ -20,11 +20,12 @@
     "build": "eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.5",
+    "@11ty/eleventy": "^1.0.0-beta.8",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "dayjs": "^1.10.7",
     "eleventy-plugin-helmet": "^0.2.2",
     "eleventy-plugin-workbox": "^1.4.0",
+    "eleventy-plugin-youtube-embed": "^1.6.5",
     "workbox-build": "^6.3.0"
   }
 }

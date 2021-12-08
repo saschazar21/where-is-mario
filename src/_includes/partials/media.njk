@@ -1,19 +1,19 @@
+<style data-helmet="media">{% include 'styles/media.css' %}</style>
+
 {% if location.media %}
-
-{% for key, value in location.media %}
-
-{% if key == 'video' %}
-
-{% youtube value.id %}
-
-{% elif key == 'images' and value.length > 0 %}
-
-{% for image in value %}
-
-{% endfor %}
-
-{% endif %}
-
-{% endfor %}
-
+  {% for key, value in location.media %}
+    {% if key == 'video' %}
+      {% if value.provider == 'youtube' %}
+        {% youtube value.id %}
+      {% endif %}
+    {% elif key == 'images' and value.length > 0 %}
+      <div class="gallery">
+        {% for image in value %}
+          {% if image.provider == 'imgur' %}
+              {% imgur image.id %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
 {% endif %}

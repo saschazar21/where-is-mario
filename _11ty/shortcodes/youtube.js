@@ -10,7 +10,7 @@ module.exports = (...args) => {
     <iframe
       width="576"
       height="324"
-      class="lazyload"
+      class="lazyload youtube"
       data-src="https://www.youtube-nocookie.com/embed/${id}?rel=0"
       loading="lazy"
       title="YouTube video player"

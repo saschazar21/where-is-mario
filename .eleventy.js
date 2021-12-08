@@ -1,12 +1,15 @@
 const filters = require('./_11ty/filters');
 const plugins = require('./_11ty/plugins');
-const shortcodes = require('./_11ty/shortcodes');
+const {
+  async: asyncShortcodes,
+  sync: syncShortcodes,
+} = require('./_11ty/shortcodes');
 
-module.exports = config => {
+module.exports = (config) => {
   config.addPassthroughCopy({ 'src/_data/**/*.json': './' });
   config.addPassthroughCopy({ public: './' });
 
-  Object.keys(filters).forEach(filter => {
+  Object.keys(filters).forEach((filter) => {
     config.addFilter(filter, filters[filter]);
   });
 
@@ -14,7 +17,11 @@ module.exports = config => {
     config.addPlugin(plugin, pluginOptions)
   );
 
-  shortcodes.forEach(([shortcode, fn]) =>
+  asyncShortcodes.forEach(([shortcode, fn]) =>
+    config.addNunjucksAsyncShortcode(shortcode, fn)
+  );
+
+  syncShortcodes.forEach(([shortcode, fn]) =>
     config.addNunjucksShortcode(shortcode, fn)
   );
 

@@ -10,10 +10,27 @@
       }
     },
     "media": {
-      "images": [],
+      "images": [
+        {
+          "id": "sNGlS9m",
+          "provider": "imgur"
+        },
+        {
+          "id": "oZFPhl4",
+          "provider": "imgur"
+        },
+        {
+          "id": "DO2xC8a",
+          "provider": "imgur"
+        },
+        {
+          "id": "nbNVigP",
+          "provider": "imgur"
+        }
+      ],
       "video": {
         "id": "BHI1r-hnhGA",
-        "platform": "youtube"
+        "provider": "youtube"
       }
     },
     "date": "2021-11-12"

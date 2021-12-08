@@ -26,6 +26,7 @@
     "eleventy-plugin-helmet": "^0.2.2",
     "eleventy-plugin-workbox": "^1.4.0",
     "eleventy-plugin-youtube-embed": "^1.6.5",
+    "node-fetch": "2",
     "workbox-build": "^6.3.0"
   }
 }

@@ -7,13 +7,13 @@
         {% youtube value.id %}
       {% endif %}
     {% elif key == 'images' and value.length > 0 %}
-      <div class="gallery">
+      {# <div class="gallery">
         {% for image in value %}
           {% if image.provider == 'imgur' %}
               {% imgur image.id %}
           {% endif %}
         {% endfor %}
-      </div>
+      </div> #}
     {% endif %}
   {% endfor %}
 {% endif %}

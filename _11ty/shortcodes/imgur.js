@@ -44,12 +44,12 @@ const sizes = [
   },
 ];
 
-const fetchMetadata = async (id) =>
+const fetchMetadata = async id =>
   fetch(new URL(id, IMGUR_API_URL), {
     headers: { authorization: `Client-ID ${clientID}` },
   })
-    .then((res) => res.json())
-    .catch((e) => {
+    .then(res => res.json())
+    .catch(e => {
       console.error(e);
       return {};
     });
@@ -58,38 +58,41 @@ const getImageUrl = (id, size, type) =>
   new URL(`${id + size.suffix}.${type.suffix}`, IMGUR_IMAGE_URL).toString();
 
 const srcset = (id, type) => {
-  const supported = sizes.filter((size) => size.formats.includes(type));
+  const supported = sizes.filter(size => size.formats.includes(type));
 
   return supported
-    .map((size) => `${getImageUrl(id, size, type)} ${size.width}w`)
+    .map(size => `${getImageUrl(id, size, type)} ${size.width}w`)
     .join(', ');
 };
 
 module.exports = (...args) => {
-  const [id] = args;
+  const [id, layout = 'responsive'] = args;
 
   // TODO: wait for new Eleventy release (1.0.0-beta.9) for adding asynchronous shortcodes
   // source: https://github.com/11ty/eleventy/issues/2108
   // ------
   // const { data: { description, height, width } = {} } = await fetchMetadata(id);
 
-  const sources = Object.keys(formats)
-    .map(
-      (format) =>
-        `<source srcset="${srcset(id, formats[format])}" type="${
-          formats[format].type
-        }">`
-    )
-    .join('');
+  const iter = Object.keys(formats)[Symbol.iterator]();
 
-  return `
-    <picture>
-      ${sources}
-      <img
-        class="lazyload"
-        loading="lazy"
-        src="${getImageUrl(id, sizes[0], formats.jpeg)}"
-      />
-    </picture>
-  `;
+  const getImage = () => {
+    const { value: format, done } = iter.next();
+
+    if (done) {
+      return '';
+    }
+
+    return `
+      <amp-img
+        alt="An image showing Mario on his travels"
+        srcset="${srcset(id, formats[format])}"
+        layout="${layout}"
+        width="4"
+        height="3"
+      >
+        ${getImage()}
+      </amp-img>`;
+  };
+
+  return getImage();
 };

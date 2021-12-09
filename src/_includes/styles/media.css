@@ -1,24 +1,15 @@
-.gallery {
-  display: grid;
-  column-gap: 0.5rem;
-  row-gap: 0.5rem;
-  grid-template-columns: 1fr;
-  margin-bottom: 2rem;
-  max-width: 100%;
+amp-inline-gallery {
+  --margin: 1rem;
+
+  margin-bottom: var(--margin);
 }
 
-.gallery > picture,
-.gallery img {
-  height: 100%;
-  width: 100%;
-}
-
-.gallery img {
-  object-fit: cover;
+amp-img {
+  background-color: var(--color-bg);
 }
 
 @media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 0.5fr);
+  amp-inline-gallery {
+    --margin: 1rem;
   }
 }

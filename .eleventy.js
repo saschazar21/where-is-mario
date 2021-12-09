@@ -17,13 +17,13 @@ module.exports = config => {
     config.addPlugin(plugin, pluginOptions)
   );
 
-  // asyncShortcodes.forEach(([shortcode, fn]) =>
-  //   config.addNunjucksAsyncShortcode(shortcode, fn)
-  // );
+  asyncShortcodes.forEach(([shortcode, fn]) =>
+    config.addNunjucksAsyncShortcode(shortcode, fn)
+  );
 
-  // syncShortcodes.forEach(([shortcode, fn]) =>
-  //   config.addNunjucksShortcode(shortcode, fn)
-  // );
+  syncShortcodes.forEach(([shortcode, fn]) =>
+    config.addNunjucksShortcode(shortcode, fn)
+  );
 
   return {
     dir: {

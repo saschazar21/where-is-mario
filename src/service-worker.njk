@@ -1,0 +1,29 @@
+---
+layout: base.njk
+permalink: /service-worker.html
+eleventyExcludeFromCollections: true
+---
+
+<main>
+
+<h1>Loaded 100%</h1>
+
+<p>
+  The website has been loaded successfully. Please visit the <a href="/">home page</a> to see it in action.
+</p>
+
+</main>
+
+{% include 'partials/footer.njk' %}
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        await navigator.serviceWorker.register('/service-worker.js');
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  }
+</script>

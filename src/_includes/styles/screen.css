@@ -1,9 +1,11 @@
 .screen {
+  --padding: 2rem;
+
   position: relative;
   border-radius: 4px;
   border-bottom: 2rem solid RGB(var(--color-primary));
   margin: 0 auto 2rem;
-  padding: 2rem 2rem calc(96px + 2rem);
+  padding: var(--padding) calc(var(--padding) * 0.5) calc(96px + var(--padding));
   max-width: 640px;
   background-color: RGB(var(--color-secondary));
   color: RGB(var(--color-main));
@@ -66,5 +68,11 @@
 @media (prefers-color-scheme: dark) {
   .screen {
     --color-main: var(--color-bg);
+  }
+}
+
+@media (min-width: 768px) {
+  .screen {
+    --padding: 3rem;
   }
 }

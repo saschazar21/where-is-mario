@@ -1,11 +1,9 @@
-const helmet = require('eleventy-plugin-helmet');
+const amp = require('@ampproject/eleventy-plugin-amp');
 const { cache: pwa } = require('eleventy-plugin-workbox');
 const rss = require('@11ty/eleventy-plugin-rss');
-const youtube = require('eleventy-plugin-youtube-embed');
 
 module.exports = [
-  [helmet, {}],
+  [amp, {}],
   [pwa, {}],
   [rss, {}],
-  [youtube, { lazy: true, lite: true }],
 ];

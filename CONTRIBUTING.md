@@ -17,12 +17,14 @@ Mario has travelled again? Great – so please let us know where you have seen h
 
 ## Contributing to the website 🛠️
 
-This website is a statically generated [Eleventy](https://11ty.dev) website hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
+This website is a statically generated, [AMP-compatible](https://amp.dev) [Eleventy](https://11ty.dev) website hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
 
-There's still a lot to do, especially when it comes to improving the CSS styles, as well as video- and image embeds. In the long run, it might even make sense to refactor the website to a full-fledged [AMP](https://amp.dev/) version.
+There's still a lot to do, especially when it comes to improving the CSS styles, as well as image embeds (along with other media).
 
 You're more than welcome to express your thoughts or suggestions using a [pull request](https://github.com/saschazar21/where-is-mario/pulls).
 
 ### Adding shortcodes ✨
 
-Currently video- & and image embeds work using [Nunjucks shortcodes](https://www.11ty.dev/docs/shortcodes/). If you want to add suppport for other platforms or providers (e.g. Google Maps), please do so by opening a pull request. Examples of existing shortcodes are available in the [\_11ty/shortcodes](https://github.com/saschazar21/where-is-mario/blob/main/_11ty/shortcodes) directory.
+Currently image embeds work using [Nunjucks shortcodes](https://www.11ty.dev/docs/shortcodes/). If you want to add suppport for other platforms or providers (e.g. Google Maps), please do so by opening a pull request. Examples of existing shortcodes are available in the [\_11ty/shortcodes](https://github.com/saschazar21/where-is-mario/blob/main/_11ty/shortcodes) directory.
+
+As of [v1.0.0-beta.8](https://github.com/11ty/eleventy/releases/tag/v1.0.0-beta.8), nested asynchronous shortcodes are not yet supported. Support has been announced for `v1.0.0-beta.9` – until then, please make sure to only add synchronous shortcodes.

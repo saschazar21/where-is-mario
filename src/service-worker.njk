@@ -20,7 +20,8 @@ eleventyExcludeFromCollections: true
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        await navigator.serviceWorker.register('/service-worker.js');
+        const sw = await navigator.serviceWorker.register('/service-worker.js');
+        sw.addEventListener('updatefound', () => window.location.reload());
       } catch (error) {
         console.error(error);
       }

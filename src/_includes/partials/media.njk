@@ -1,28 +1,11 @@
-<style>{% include 'styles/media.css' %}</style>
+{% set media = location.media %}
+{% set images = images[idx] %}
 
-{% if location.media %}
-  {% for key, value in location.media %}
-    {% if key == 'video' %}
-      {% if value.provider == 'youtube' %}
-        {% youtube value.id %}
-      {% endif %}
-    {% elif key == 'images' and value.length > 0 %}
-      <amp-inline-gallery layout="container">
-        <amp-base-carousel
-          layout="responsive"
-          width="4"
-          height="3"
-          loop="true"
-          auto-advance="true"
-          auto-advance-interval="5000"
-        >
-          {% for image in value %}
-            {% if image.provider == 'imgur' %}
-              {% imgur image.id %}
-            {% endif %}
-          {% endfor %}
-        </amp-base-carousel>
-      </amp-inline-gallery>
-    {% endif %}
-  {% endfor %}
+{% if images and images.length > 0 %}
+  {% include 'partials/images.njk' %}
+{% endif %}
+
+{% if media.video %}
+  {% set video = media.video %}
+  {% include 'partials/video.njk' %}
 {% endif %}

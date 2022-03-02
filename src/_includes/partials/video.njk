@@ -1,0 +1,5 @@
+{% if video.provider == 'youtube' %}
+  {% youtube video.id %}
+{% else %}
+  {# TODO: add more providers, if needed #}
+{% endif %}

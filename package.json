@@ -20,7 +20,8 @@
     "build": "eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.8",
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@ampproject/eleventy-plugin-amp": "^0.5.7",
     "dayjs": "^1.10.7",

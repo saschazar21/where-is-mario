@@ -1,8 +1,3 @@
-const fetch = require('node-fetch');
-
-const clientID = process.env.IMGUR_CLIENT_ID;
-
-const IMGUR_API_URL = 'https://api.imgur.com/3/image/';
 const IMGUR_IMAGE_URL = 'https://i.imgur.com/';
 
 const formats = {
@@ -44,16 +39,6 @@ const sizes = [
   },
 ];
 
-const fetchMetadata = async id =>
-  fetch(new URL(id, IMGUR_API_URL), {
-    headers: { authorization: `Client-ID ${clientID}` },
-  })
-    .then(res => res.json())
-    .catch(e => {
-      console.error(e);
-      return {};
-    });
-
 const getImageUrl = (id, size, type) =>
   new URL(`${id + size.suffix}.${type.suffix}`, IMGUR_IMAGE_URL).toString();
 
@@ -66,12 +51,8 @@ const srcset = (id, type) => {
 };
 
 module.exports = (...args) => {
-  const [id, layout = 'responsive'] = args;
-
-  // TODO: wait for new Eleventy release (1.0.0-beta.9) for adding asynchronous shortcodes
-  // source: https://github.com/11ty/eleventy/issues/2108
-  // ------
-  // const { data: { description, height, width } = {} } = await fetchMetadata(id);
+  const [data, layout = 'responsive'] = args;
+  const { description, height, id, width } = data;
 
   const iter = Object.keys(formats)[Symbol.iterator]();
 
@@ -84,11 +65,11 @@ module.exports = (...args) => {
 
     return `
       <amp-img
-        alt="An image showing Mario on his travels"
+        alt="${description.replace(/"/g, "'")}"
         srcset="${srcset(id, formats[format])}"
         layout="${layout}"
-        width="4"
-        height="3"
+        width="${width}"
+        height="${height}"
       >
         ${getImage()}
       </amp-img>`;

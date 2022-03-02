@@ -12,6 +12,8 @@ title: Where is Mario?
 </header>
 
 {% for location in history %}
+  {% set idx = loop.index0 %}
+
   {% if loop.first %}
     <div id="location">
       {% include 'partials/screen.njk' %}

@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url('/SuperMario256.ttf') format('truetype');
+  font-display: swap;
 }
 
 :root {

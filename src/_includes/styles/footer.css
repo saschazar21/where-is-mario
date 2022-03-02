@@ -9,7 +9,7 @@ footer {
 
 footer > h2 {
   margin-top: 0;
-  color: var(--color-main);
+  color: RGB(var(--color-main));
   font-size: 1rem;
 }
 

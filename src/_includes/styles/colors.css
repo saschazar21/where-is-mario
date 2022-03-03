@@ -1,6 +1,9 @@
 :root {
-  --color-bg: 244, 243, 244;
-  --color-main: 18, 17, 19;
+  --color-dark: 18, 17, 19;
+  --color-light: 244, 243, 244;
+
+  --color-bg: var(--color-light);
+  --color-main: var(--color-dark);
   --color-red: 194, 53, 45;
   --color-green: 13, 147, 0;
   --color-green-light: 136, 216, 0;
@@ -11,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: 18, 17, 19;
-    --color-main: 244, 243, 244;
+    --color-bg: var(--color-dark);
+    --color-main: var(--color-light);
     --color-blue: 5, 162, 217;
     --color-primary: 0, 124, 141;
     --color-secondary: 181, 235, 242;

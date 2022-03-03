@@ -2,7 +2,8 @@
   --margin: 96px;
 
   position: relative;
-  margin-top: calc(var(--margin) + 3rem);
+  margin: calc(var(--margin) + 3rem) auto 0;
+  max-width: 640px;
 }
 
 .location-entry::before {
@@ -47,4 +48,14 @@
 .location-headline > small {
   font-size: 1.25rem;
   text-align: center;
+}
+
+.location-media {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.location-media > amp-inline-gallery,
+.location-media > amp-youtube {
+  width: 100%;
 }

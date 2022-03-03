@@ -8,6 +8,8 @@
     <h3 class="location-headline"><small>{{ location.location.name }},</small><span>{{ location.location.city }}</span></h3>
     <strong>{{ startDate | dateRelative(endDate) }}</strong>
     <span>{{ startDate | date('MMM D, YYYY') }} – {{ endDate | date('MMM D, YYYY') }}</span>
-    {% include 'partials/media.njk' %}
+    <div class="location-media">
+      {% include 'partials/media.njk' %}
+    </div>
   </article>
 </li>

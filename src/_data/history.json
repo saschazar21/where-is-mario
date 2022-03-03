@@ -1,6 +1,78 @@
 [
   {
     "location": {
+      "name": "City Centre",
+      "city": "Steyr",
+      "country": "Austria",
+      "coordinates": {
+        "latitude": 48.04023,
+        "longitude": 14.41901
+      }
+    },
+    "media": {
+      "images": [
+        {
+          "id": "R3ibmvd",
+          "provider": "imgur"
+        },
+        {
+          "id": "NrzeY3T",
+          "provider": "imgur"
+        },
+        {
+          "id": "cuAesIA",
+          "provider": "imgur"
+        },
+        {
+          "id": "1NMVPDT",
+          "provider": "imgur"
+        },
+        {
+          "id": "nyCztsY",
+          "provider": "imgur"
+        },
+        {
+          "id": "V0dNClQ",
+          "provider": "imgur"
+        },
+        {
+          "id": "606mguw",
+          "provider": "imgur"
+        },
+        {
+          "id": "a0R3Nmn",
+          "provider": "imgur"
+        },
+        {
+          "id": "2W6bgI1",
+          "provider": "imgur"
+        },
+        {
+          "id": "FPhetMM",
+          "provider": "imgur"
+        },
+        {
+          "id": "dbH0gOg",
+          "provider": "imgur"
+        },
+        {
+          "id": "IiNxfXa",
+          "provider": "imgur"
+        },
+        {
+          "id": "pwgDuBc",
+          "provider": "imgur"
+        },
+        {
+          "id": "dkzgvig",
+          "provider": "imgur"
+        }
+      ]
+    },
+    "date": "2022-03-01"
+  },
+  {
+    "location": {
       "name": "Andromeda Tower",
       "city": "Vienna",
       "country": "Austria",

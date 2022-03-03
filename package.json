@@ -25,6 +25,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@ampproject/eleventy-plugin-amp": "^0.5.7",
     "dayjs": "^1.10.7",
+    "dotenv": "^16.0.0",
     "eleventy-plugin-workbox": "^1.4.0",
     "node-fetch": "2",
     "workbox-build": "^6.3.0"

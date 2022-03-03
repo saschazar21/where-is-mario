@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const fs = require('fs');
 const { resolve } = require('path');
 const { promisify } = require('util');

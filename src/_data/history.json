@@ -1,6 +1,50 @@
 [
   {
     "location": {
+      "name": "Asturias Office",
+      "city": "Oviedo",
+      "country": "Spain",
+      "coordinates": {
+        "latitude": 43.422,
+        "longitude": -5.825
+      }
+    },
+    "media": {
+      "images": [
+        {
+          "id": "8Ov7DrO",
+          "provider": "imgur"
+        },
+        {
+          "id": "KRnDsY2",
+          "provider": "imgur"
+        },
+        {
+          "id": "JeghR2e",
+          "provider": "imgur"
+        },
+        {
+          "id": "WUM37ew",
+          "provider": "imgur"
+        }
+      ]
+    },
+    "date": "2022-05-09"
+  },
+  {
+    "location": {
+      "name": "Andromeda Tower",
+      "city": "Vienna",
+      "country": "Austria",
+      "coordinates": {
+        "latitude": 48.233,
+        "longitude": 16.414
+      }
+    },
+    "date": "2022-03-02"
+  },
+  {
+    "location": {
       "name": "City Centre",
       "city": "Steyr",
       "country": "Austria",

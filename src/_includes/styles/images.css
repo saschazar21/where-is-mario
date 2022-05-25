@@ -5,7 +5,7 @@ amp-inline-gallery {
 }
 
 amp-img {
-  background-color: RGB(var(--color-dark));
+  background-color: transparent;
 }
 
 @media (min-width: 768px) {

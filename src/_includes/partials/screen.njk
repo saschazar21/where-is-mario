@@ -3,5 +3,6 @@
 <article class="screen">
   <strong class="screen-msg">Mario was last seen at:</strong>
   <h2 class="screen-headline"><small>{{ location.location.name }},</small><span>{{ location.location.city }}</span></h2>
+  {% include 'partials/maps.njk' %}
   {% include 'partials/media.njk' %}
 </article>

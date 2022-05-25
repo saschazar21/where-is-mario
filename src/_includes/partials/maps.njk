@@ -1,0 +1,6 @@
+<style>{% include 'styles/maps.css' %}</style>
+
+{% set lat = location.location.coordinates.latitude %}
+{% set lng = location.location.coordinates.longitude %}
+
+{% maps lat, lng %}
